@@ -13,8 +13,11 @@ namespace Homework1
         public void SetUp()
         {
             _driver = new ChromeDriver();
+<<<<<<< HEAD
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
 
+=======
+>>>>>>> f82bdba198d520708f02406979ccb61457c58af1
         }
 
         [Test]
@@ -24,9 +27,12 @@ namespace Homework1
             _driver.Manage().Window.Maximize();
             Console.WriteLine("web open successfully");
 
+<<<<<<< HEAD
            
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
             IWebElement searchResult = wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@title=\"Contact us\"]")));
+=======
+>>>>>>> f82bdba198d520708f02406979ccb61457c58af1
             IWebElement contactUs = _driver.FindElement(By.XPath("//*[@title=\"Contact us\"]"));
             contactUs.Click();
             string actualTitle1 = _driver.Title;
@@ -40,7 +46,11 @@ namespace Homework1
 
             Thread.Sleep(3000);
 
+<<<<<<< HEAD
             _driver.Navigate().Back(); 
+=======
+            _driver.Navigate().Back();
+>>>>>>> f82bdba198d520708f02406979ccb61457c58af1
 
             string actualTitle2 = _driver.Title;
             string expectedTitle2 = "My Store";
